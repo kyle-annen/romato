@@ -1,8 +1,6 @@
 # Zomatastic
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/zomatastic`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A simple api wrapper for Zomato API, all methods coorelate to the API definitions in the Zomato API documentation: https://developers.zomato.com/documentation.
 
 ## Installation
 
@@ -22,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+#### Zomatastic::Zomato.new(options)
+
+The initialization of the class accetps an options parameter as a hash. Provide the API key here as a hash.
+> Zomatastic::Zomato.new({ api_key: "APIKEY" })
+or
+> Zomatastic::Zoamat.new({ :api_key => "APIKEY" })
 
 ## Development
 
