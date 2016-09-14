@@ -23,9 +23,12 @@ Or install it yourself as:
 #### Zomatastic::Zomato.new(options)
 
 The initialization of the class accetps an options parameter as a hash. Provide the API key here as a hash.
-> Zomatastic::Zomato.new({ api_key: "APIKEY" })
+
+`Zomatastic::Zomato.new({ api_key: "APIKEY" })`
+
 or
-> Zomatastic::Zoamat.new({ :api_key => "APIKEY" })
+
+`Zomatastic::Zoamat.new({ :api_key => "APIKEY" })`
 
 ## Development
 
