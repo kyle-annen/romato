@@ -20,15 +20,36 @@ Or install it yourself as:
 
 ## Usage
 
-#### Zomatastic::Zomato.new(options)
+All api methods accept an options hash if the API call accepts parameters, and directly mirror the API parameters defined by the Zomato API v2.1.
+
+#### Initialization
+
+##### Zomatastic::Zomato.new()
 
 The initialization of the class accetps an options parameter as a hash. Provide the API key here as a hash.
 
-`Zomatastic::Zomato.new({ api_key: "APIKEY" })`
+`zomato_instance = Zomatastic::Zomato.new("APIKEY")`
 
-or
+#### Common Methods (as defined by Zomato API)
+### Zomatastic::Zomato.get_categories()
 
-`Zomatastic::Zoamat.new({ :api_key => "APIKEY" })`
+Get the categories of venues defined by Zomato, accepts no parameters.
+
+`zomato_instance.get_categories()`
+
+Response: 
+
+```json
+{"categories"=>[{"categories"=>{"id"=>1, "name"=>"Delivery"}}, {"categories"=>{"id"=>2, "name"=>"Dine-out"}}, {"categories"=>{"id"=>3, "name"=>"Nightlife"}}, {"categories"=>{"id"=>4, "name"=>"Catching-up"}}, {"categories"=>{"id"=>5, "name"=>"Takeaway"}}, {"categories"=>{"id"=>6, "name"=>"Cafes"}}, {"categories"=>{"id"=>7, "name"=>"Daily Menus"}}, {"categories"=>{"id"=>8, "name"=>"Breakfast"}}, {"categories"=>{"id"=>9, "name"=>"Lunch"}}, {"categories"=>{"id"=>10, "name"=>"Dinner"}}, {"categories"=>{"id"=>11, "name"=>"Pubs & Bars"}}, {"categories"=>{"id"=>12, "name"=>"Premium Delivery"}}, {"categories"=>{"id"=>13, "name"=>"Pocket Friendly Delivery"}}, {"categories"=>{"id"=>14, "name"=>"Clubs & Lounges"}}]}
+```
+
+Categories will be accessible through the class variable `categories`
+
+`zomato_instance.categories`
+
+
+
+
 
 ## Development
 
