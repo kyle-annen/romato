@@ -154,7 +154,7 @@ module Romato
 		#options passed as a hash
 		#options hash example: {query: "seattle", lat: "47.6906021", lon}
 		def get_locations(options)	
-			url_base = @base_uri + "/locations?"
+			url_base = @base_uri + "locations?"
 			a = options.has_key?(:query) ? "&query=#{options[:query]}" : ""
 			b = options.has_key?(:lat) ? "&lat=#{options[:lat]}" : ""
 			c = options.has_key?(:lon) ? "&lon=#{options[:lon]}" : ""
@@ -180,7 +180,7 @@ module Romato
 		# options example: {res_id: "279"}
 		def get_daily_menu(options)
 			zomato_daily_menu_url = @base_uri +
-				"/restaurant?res_id=#{options[:res_id]}"
+				"restaurant?res_id=#{options[:res_id]}"
 			response = HTTParty.get(zomato_daily_menu_url, headers: @headers)
 			if response.success?
 				@daily_menu = response.parsed_response
@@ -197,7 +197,7 @@ module Romato
 		def get_restaurant(options)
 
 			zomato_restaurant_details_url = @base_uri +
-				"/restaurant?res_id=#{options[:res_id]}"
+				"restaurant?res_id=#{options[:res_id]}"
 			response = HTTParty.get(zomato_restaurant_details_url, headers: @headers)
 			if response.success?
 				@restaurant = response.parsed_response
