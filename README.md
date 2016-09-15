@@ -1,4 +1,4 @@
-# Zomatastic
+# Zomatastic - Zomato API Wrapper for Ruby
 
 A simple api wrapper for Zomato API, all methods coorelate to the API definitions in the Zomato API documentation: https://developers.zomato.com/documentation.
 
@@ -22,7 +22,8 @@ Or install it yourself as:
 
 All api methods accept an options hash if the API call accepts parameters, and directly mirror the API parameters defined by the Zomato API v2.1.
 
-#### Initialization
+## Initialization
+___
 
 ##### Zomatastic::Zomato.new()
 
@@ -30,8 +31,29 @@ The initialization of the class accetps an options parameter as a hash. Provide 
 
 `zomato_instance = Zomatastic::Zomato.new("APIKEY")`
 
-#### Common Methods (as defined by Zomato API)
-### Zomatastic::Zomato.get_categories()
+## Methods
+
+* Common
+	* Zomatastic::Zomato.get_categories()
+	* Zomatastic::Zomato.get_cities()
+	* Zomatastic::Zomato.get_collections()
+	* Zomatastic::Zomato.get_cuisines()
+	* Zomatastic::Zomato.get_establishments()
+	* Zomatastic::Zomato.get_geocode()
+* Location
+	* Zomatastic::Zomato.get_location_details()
+	* Zomatastic::Zomato.get_locations()
+* Restaurant
+	* Zomatastic::Zomato.get_dailymenu()
+	* Zomatastic::Zomato.get_restaurant()
+	* Zomatastic::Zomato.get_reviews()
+	* Zomatastic::Zomato.get_search()
+
+
+
+### Common Methods (as defined by Zomato API)
+___
+#### Zomatastic::Zomato.get_categories()
 
 Get the categories of venues defined by Zomato, accepts no parameters.
 
@@ -40,7 +62,8 @@ Get the categories of venues defined by Zomato, accepts no parameters.
 Response: 
 
 ```ruby
-{"categories"=>
+{
+	"categories"=>
 	[
 		{"categories"=>{"id"=>1, "name"=>"Delivery"}}, 
 		{"categories"=>{"id"=>2, "name"=>"Dine-out"}}, 
@@ -64,6 +87,105 @@ Categories will be accessible through the class variable `categories`
 
 `zomato_instance.categories`
 
+#### Zomatastic::Zomato.get_cities(options)
+
+View API documentation here: https://developers.zomato.com/documentation#!/common/cities
+
+Accepts `options` hash with the following values:
+* `q` query by city name
+* `count` max results to return (optional)
+
+or
+
+* `lat` query in conjunction with lon
+* `lon` query in conjunction with lat
+* `count` max results to return (optional)
+
+or
+
+* `city_ids` comma seperated city ids string
+* `count` max results to return (optional)
+
+Example Options Hash `{ q: "seattle", count: 30 }`
+
+Usage `zomato_instance.get_cities( {q: "seattle", count: 30} )`
+
+Access through class variable `cities`
+
+`zomato_instance.cities`
+
+```ruby 
+{
+	"location_suggestions"=>
+	[
+		{
+			"id"=>279, 
+			"name"=>"Seattle, WA", 
+			"country_id"=>216, 
+			"country_name"=>"United States", 
+			"discovery_enabled"=>1, 
+			"has_new_ad_format"=>0, 
+			"is_state"=>0, 
+			"state_id"=>115, 
+			"state_name"=>"Washington State", 
+			"state_code"=>"WA"}
+	], 
+	"status"=>"success", 
+	"has_more"=>0, 
+	"has_total"=>0
+} 
+```
+
+#### Zomastic::Zomato.get_collections(options)
+
+View API documentation here: https://developers.zomato.com/documentation#!/common/collections
+
+Accepts `options` hash with the following values:
+* `city_id` query collections by city id
+* `count` max results (optional)
+
+or 
+
+* `lat` query in conjunction with lon
+* `lon` query in conjunction with lat
+* `count` max results (optional)
+
+Usage `zomato_instance.get_collections( { city_id: , count: 1000 })`
+
+Access through class variable `collections`
+
+`zomato_instance.collections`
+
+```ruby
+{
+     "collections" => [
+        [ 0] {
+            "collection" => {
+                "collection_id" => 1,
+                    "res_count" => 30,
+                    "image_url" => "https://b.zmtcdn.com/data/collections/e140962ec7eecbb851155fe0bb0cd28c_1463395649.jpg",
+                          "url" => "https://www.zomato.com/moscow-id/top-restaurants?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                        "title" => "Trending this Week",
+                  "description" => "The most popular restaurants in town this week",
+                    "share_url" => "http://www.zoma.to/c-279/1"
+            }
+        },
+        [ 1] {
+            "collection" => {
+                "collection_id" => 29,
+                    "res_count" => 31,
+                    "image_url" => "https://b.zmtcdn.com/data/collections/4661c54a624d8a055119af2d0ccde724_1463399059.jpg",
+                          "url" => "https://www.zomato.com/moscow-id/best-new-restaurants?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
+                        "title" => "Newly Opened",
+                  "description" => "The best new places in town",
+                    "share_url" => "http://www.zoma.to/c-279/29"
+            }
+        },
+        ........
+```
+
+
+
 
 
 
@@ -76,7 +198,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/zomatastic. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/kyle-annen/zomatastic. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 
 ## License
