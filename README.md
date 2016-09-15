@@ -627,6 +627,8 @@ Usage `zomato_instance.get_search( { entity_id: "279", cuisines: "997" } )`
 Access through class variable `search`
 
 `zomato_instance.search`
+
+```ruby
 {
   "results_found": 1232547,
   "results_start": 0,
@@ -649,7 +651,7 @@ Access through class variable `search`
           "latitude": "12.9348880271",
           "longitude": "77.6160025969",
           ...
-```ruby
+```
 
 ## Development
 
