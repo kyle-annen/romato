@@ -458,7 +458,7 @@ Access through class variable `daily_menu`
                        "R" => {
         "res_id" => 16717368
     },
-                  "apikey" => "f47a72ab00afe64aab78b9919ee3d427",
+                  "apikey" => "APIKEY",
                       "id" => "16717368",
                     "name" => "Canlis",
                      "url" => "https://www.zomato.com/seattle/canlis-westlake?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -514,7 +514,7 @@ Access through class variable `restaurant`
                        "R" => {
         "res_id" => 16717368
     },
-                  "apikey" => "f47a72ab00afe64aab78b9919ee3d427",
+                  "apikey" => "APIKEY",
                       "id" => "16717368",
                     "name" => "Canlis",
                      "url" => "https://www.zomato.com/seattle/canlis-westlake?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
@@ -637,7 +637,7 @@ Access through class variable `search`
         "R": {
           "res_id": 50474
         },
-        "apikey": "f47a72ab00afe64aab78b9919ee3d427",
+        "apikey": "APIKEY",
         "id": "50474",
         "name": "Empire Restaurant",
         "url": "https://www.zomato.com/bangalore/empire-restaurant-koramangala-5th-block?utm_source=api_basic_user&utm_medium=api&utm_campaign=v2.1",
