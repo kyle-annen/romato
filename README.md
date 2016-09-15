@@ -13,9 +13,16 @@
       - [Romato::Zomato.get_cities(options)](#romatozomatoget_citiesoptions)
       - [Romato::Zomato.get_collections(options)](#romatozomatoget_collectionsoptions)
       - [Romato::Zomato.get_cuisines()](#romatozomatoget_cuisines)
-  - [Development](#development)
-  - [Contributing](#contributing)
-  - [License](#license)
+      - [Romato::Zomato.get_establishments()](#romatozomatoget_establishments)
+      - [Romato::Zomato.get_geocode()](#romatozomatoget_geocode)
+    - [Location Methods (as defined by Zomato API)](#location-methods-as-defined-by-zomato-api)
+      - [Romato::Zomato.get_location_details()](#romatozomatoget_location_details)
+      - [Romato::Zomato.get_locations()](#romatozomatoget_locations)
+  - [Restaurant Methods (as defined by Zomato API)](#restaurant-methods-as-defined-by-zomato-api)
+      - [Romato::Zomato.get_daily_menu()](#romatozomatoget_daily_menu)
+      - [Romato::Zomato.get_restaurant()](#romatozomatoget_restaurant)
+      - [Romato::Zomato.get_reviews()](#romatozomatoget_reviews)
+      - [Romato::Zomato.search()](#romatozomatosearch)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
