@@ -1,3 +1,7 @@
+# Romato - Zomato API Wrapper for Ruby
+
+A simple api wrapper for Zomato API, all methods coorelate to the API definitions in the Zomato API documentation: https://developers.zomato.com/documentation.
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
@@ -25,10 +29,6 @@
       - [Romato::Zomato.search()](#romatozomatosearch)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Romato - Zomato API Wrapper for Ruby
-
-A simple api wrapper for Zomato API, all methods coorelate to the API definitions in the Zomato API documentation: https://developers.zomato.com/documentation.
 
 ## Installation
 
