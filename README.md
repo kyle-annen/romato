@@ -1,4 +1,24 @@
-# Zomatastic - Zomato API Wrapper for Ruby
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Romato - Zomato API Wrapper for Ruby](#zomatastic---zomato-api-wrapper-for-ruby)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Initialization](#initialization)
+        - [Romato::Zomato.new()](#zomatasticzomatonew)
+  - [Methods](#methods)
+    - [Common Methods (as defined by Zomato API)](#common-methods-as-defined-by-zomato-api)
+      - [Romato::Zomato.get_categories()](#zomatasticzomatoget_categories)
+      - [Romato::Zomato.get_cities(options)](#zomatasticzomatoget_citiesoptions)
+      - [Zomastic::Zomato.get_collections(options)](#zomasticzomatoget_collectionsoptions)
+  - [Development](#development)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# Romato - Zomato API Wrapper for Ruby
 
 A simple api wrapper for Zomato API, all methods coorelate to the API definitions in the Zomato API documentation: https://developers.zomato.com/documentation.
 
@@ -7,7 +27,7 @@ A simple api wrapper for Zomato API, all methods coorelate to the API definition
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'zomatastic'
+gem 'romato'
 ```
 
 And then execute:
@@ -16,7 +36,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install zomatastic
+    $ gem install romato
 
 ## Usage
 
@@ -25,35 +45,17 @@ All api methods accept an options hash if the API call accepts parameters, and d
 ## Initialization
 ___
 
-##### Zomatastic::Zomato.new()
+##### Romato::Zomato.new()
 
 The initialization of the class accetps an options parameter as a hash. Provide the API key here as a hash.
 
-`zomato_instance = Zomatastic::Zomato.new("APIKEY")`
+`zomato_instance = Romato::Zomato.new("APIKEY")`
 
 ## Methods
 
-* Common
-	* Zomatastic::Zomato.get_categories()
-	* Zomatastic::Zomato.get_cities()
-	* Zomatastic::Zomato.get_collections()
-	* Zomatastic::Zomato.get_cuisines()
-	* Zomatastic::Zomato.get_establishments()
-	* Zomatastic::Zomato.get_geocode()
-* Location
-	* Zomatastic::Zomato.get_location_details()
-	* Zomatastic::Zomato.get_locations()
-* Restaurant
-	* Zomatastic::Zomato.get_dailymenu()
-	* Zomatastic::Zomato.get_restaurant()
-	* Zomatastic::Zomato.get_reviews()
-	* Zomatastic::Zomato.get_search()
-
-
-
 ### Common Methods (as defined by Zomato API)
 ___
-#### Zomatastic::Zomato.get_categories()
+#### Romato::Zomato.get_categories()
 
 Get the categories of venues defined by Zomato, accepts no parameters.
 
@@ -87,7 +89,7 @@ Categories will be accessible through the class variable `categories`
 
 `zomato_instance.categories`
 
-#### Zomatastic::Zomato.get_cities(options)
+#### Romato::Zomato.get_cities(options)
 
 View API documentation here: https://developers.zomato.com/documentation#!/common/cities
 
@@ -136,7 +138,7 @@ Access through class variable `cities`
 } 
 ```
 
-#### Zomastic::Zomato.get_collections(options)
+#### Romato::Zomato.get_collections(options)
 
 View API documentation here: https://developers.zomato.com/documentation#!/common/collections
 
@@ -150,7 +152,7 @@ or
 * `lon` query in conjunction with lat
 * `count` max results (optional)
 
-Usage `zomato_instance.get_collections( { city_id: , count: 1000 })`
+Usage `zomato_instance.get_collections( { city_id: 279, count: 1000 })`
 
 Access through class variable `collections`
 
@@ -183,6 +185,26 @@ Access through class variable `collections`
         },
         ........
 ```
+
+#### Romato::Zomato.get_cuisines()
+
+View API documentation here: https://developers.zomato.com/documentation#!/common/cuisines
+
+Accepts `options` hash with the following values:
+* `city_id` query collections by city id
+
+
+or 
+
+* `lat` query in conjunction with lon
+* `lon` query in conjunction with lat
+
+
+Usage `zomato_instance.get_cuisines( { city_id: 279 })`
+
+Access through class variable `cuisines`
+
+`zomato_instance.cuisines`
 
 
 
