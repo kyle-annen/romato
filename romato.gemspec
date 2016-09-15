@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["kyleannen@gmail.com"]
 
   spec.summary       = %q{Romato is an API wrapper for Zomato API v2.1.}
-  spec.description   = %q{Romato provides a class, Zomato, which has methods cooresponding to each API class provided under the Zomato API documentation.  Please read through the Zomato API terms of use: https://www.zomato.com/api_policy}
+  spec.description   = %q{Romato provides a class, Zomato, which has methods corresponding to each API class provided under the Zomato API documentation.  Please read through the Zomato API terms of use: https://www.zomato.com/api_policy}
   spec.homepage      = "http://www.github.com/kyle-annen/romato"
   spec.license       = "MIT"
 
