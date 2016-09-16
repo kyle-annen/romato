@@ -1,4 +1,4 @@
-![alt tag](http://kyle-annen.github.io/romato-logo.svg)
+![alt tag](http://kyle-annen.github.io/romatologosmall.png)
 
 # Romato - Zomato API Wrapper for Ruby
 
