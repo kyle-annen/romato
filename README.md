@@ -8,27 +8,29 @@ A simple api wrapper for Zomato API, all methods coorelate to the API definition
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Romato - Zomato API Wrapper for Ruby](#romato---zomato-api-wrapper-for-ruby)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [Initialization](#initialization)
-        - [Romato::Zomato.new()](#romatozomatonew)
-  - [Methods](#methods)
-    - [Common Methods (as defined by Zomato API)](#common-methods-as-defined-by-zomato-api)
-      - [Romato::Zomato.get_categories()](#romatozomatoget_categories)
-      - [Romato::Zomato.get_cities(options)](#romatozomatoget_citiesoptions)
-      - [Romato::Zomato.get_collections(options)](#romatozomatoget_collectionsoptions)
-      - [Romato::Zomato.get_cuisines()](#romatozomatoget_cuisines)
-      - [Romato::Zomato.get_establishments()](#romatozomatoget_establishments)
-      - [Romato::Zomato.get_geocode()](#romatozomatoget_geocode)
-    - [Location Methods (as defined by Zomato API)](#location-methods-as-defined-by-zomato-api)
-      - [Romato::Zomato.get_location_details()](#romatozomatoget_location_details)
-      - [Romato::Zomato.get_locations()](#romatozomatoget_locations)
-  - [Restaurant Methods (as defined by Zomato API)](#restaurant-methods-as-defined-by-zomato-api)
-      - [Romato::Zomato.get_daily_menu()](#romatozomatoget_daily_menu)
-      - [Romato::Zomato.get_restaurant()](#romatozomatoget_restaurant)
-      - [Romato::Zomato.get_reviews()](#romatozomatoget_reviews)
-      - [Romato::Zomato.search()](#romatozomatosearch)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Initialization](#initialization)
+      - [Romato::Zomato.new()](#romatozomatonew)
+- [Methods](#methods)
+  - [Common Methods (as defined by Zomato API)](#common-methods-as-defined-by-zomato-api)
+    - [Romato::Zomato.get_categories()](#romatozomatoget_categories)
+    - [Romato::Zomato.get_cities()](#romatozomatoget_cities)
+    - [Romato::Zomato.get_collections()](#romatozomatoget_collections)
+    - [Romato::Zomato.get_cuisines()](#romatozomatoget_cuisines)
+    - [Romato::Zomato.get_establishments()](#romatozomatoget_establishments)
+    - [Romato::Zomato.get_geocode()](#romatozomatoget_geocode)
+  - [Location Methods (as defined by Zomato API)](#location-methods-as-defined-by-zomato-api)
+    - [Romato::Zomato.get_location_details()](#romatozomatoget_location_details)
+    - [Romato::Zomato.get_locations()](#romatozomatoget_locations)
+- [Restaurant Methods (as defined by Zomato API)](#restaurant-methods-as-defined-by-zomato-api)
+    - [Romato::Zomato.get_daily_menu()](#romatozomatoget_daily_menu)
+    - [Romato::Zomato.get_restaurant()](#romatozomatoget_restaurant)
+    - [Romato::Zomato.get_reviews()](#romatozomatoget_reviews)
+    - [Romato::Zomato.search()](#romatozomatosearch)
+- [Development](#development)
+- [Contributing](#contributing)
+- [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -99,7 +101,7 @@ Categories will be accessible through the class variable `categories`
 
 `zomato_instance.categories`
 
-#### Romato::Zomato.get_cities(options)
+#### Romato::Zomato.get_cities()
 
 View API documentation here: https://developers.zomato.com/documentation#!/common/cities
 
@@ -148,7 +150,7 @@ Access through class variable `cities`
 } 
 ```
 
-#### Romato::Zomato.get_collections(options)
+#### Romato::Zomato.get_collections()
 
 View API documentation here: https://developers.zomato.com/documentation#!/common/collections
 
