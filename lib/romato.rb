@@ -241,7 +241,7 @@ module Romato
 			l = options.key?(:category) ? "&category=#{options[:category]}" : ""
 			m = options.key?(:sort) ? "&sort=#{options[:sort]}" : ""
 			n = options.key?(:order) ? "&order=#{options[:order]}" : ""
-			zomato_search_url = a + b + c + d + e + f + g + h + i + j + k + l + m + n
+			zomato_search_url = url_base + a + b + c + d + e + f + g + h + i + j + k + l + m + n
 
 			response = HTTParty.get(zomato_search_url, headers: @headers)
 
