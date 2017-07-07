@@ -1,5 +1,3 @@
-![alt tag](http://kyle-annen.github.io/rubylogosmall.png)
-
 # Romato - Zomato API Wrapper for Ruby
 
 A simple api wrapper for Zomato API, all methods coorelate to the API definitions in the Zomato API documentation: https://developers.zomato.com/documentation.
