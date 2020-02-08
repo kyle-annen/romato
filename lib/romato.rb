@@ -1,4 +1,6 @@
+require "romato/exceptions"
 require "romato/version"
+
 module Romato
 	#use HTTParty for simple http calls
 	require 'httparty'
@@ -180,12 +182,12 @@ module Romato
 		# options example: {res_id: "279"}
 		def get_daily_menu(options)
 			zomato_daily_menu_url = @base_uri +
-				"restaurant?res_id=#{options[:res_id]}"
+				"dailymenu?res_id=#{options[:res_id]}"
 			response = HTTParty.get(zomato_daily_menu_url, headers: @headers)
 			if response.success?
 				@daily_menu = response.parsed_response
 			else
-				raise response.response
+				raise Romato::BadHttpRequestError.new("Failed to get daily menu", response)
 			end
 		end
 
